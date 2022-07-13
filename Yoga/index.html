@@ -1,69 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preload" href="fonts/opensans-bold.woff" as="font">
-  <link rel="preload" href="fonts/opensans-bold.woff2" as="font">
-
-  <link rel="preload" href="fonts/opensans-italic.woff" as="font">
-  <link rel="preload" href="fonts/opensans-italic.woff2" as="font">
-
-  <link rel="preload" href="fonts/opensans-regular.woff" as="font">
-  <link rel="preload" href="fonts/opensans-regular.woff2" as="font">
-
-  <link rel="preload" href="fonts/opensans-semibold.woff" as="font">
-  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font">
-
-  <link rel="stylesheet" href="style/swiper-bundle.min.css">
-  <link rel="stylesheet" href="style/acordion-style.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <link rel="stylesheet" href="style/style.css">
-
-  <script defer src="js/swiper-bundle.min.js"></script>
-  <script defer src="js/accordion.js"></script>
-  <script defer src="js/acordion-tap.js"></script>
-  <script defer src="js/main.js"></script>
-
-  
-  
-
+  <link rel="stylesheet" href="/style/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/style/acordion-style.css">
+  <link rel="stylesheet" href="/style/style-generator.css">
+  <link rel="stylesheet" href="/style/style-articles.css">
+  <link rel="stylesheet" href="/style/style.css">
+  <script defer src="./js/Api/swiper-bundle.min.js"></script>
+  <script defer src="./js/Api/accordion.js"></script>
+  <script defer src="./js/Api/acordion-tap.js"></script>
+  <script type="module" src="./js/Articles/articelsPages.js"></script>
+  <script type="module" src="./js/Generator/generator.js"></script>
+  <script type="module" src="./js/main.js"></script>
   <title>Рождение звезды</title>
 </head>
 
 <body class="body">
   <div class="menu-slide">
     <button class="btn-cancel">
-      <svg class="svg-cancel" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)" fill="#333333"/>
-        <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="#333333"/>
-      </svg>
+      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)"
+        fill="#333333" />
+        <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)"
+        fill="#333333" /> </svg>
     </button>
     <ul class="list-menu">
-      <li name="about-us" class="list-menu__child"><a href="#about-us" class="child__link">О нас</a></li>
-      <li name="generator" class="list-menu__child"><a href="#generator" class="child__link">Генератор</a></li>
-      <li name="quastion" class="list-menu__child"><a href="#quastion" class="child__link">Вопросы</a></li>
-      <li name="stat" class="list-menu__child"><a href="#stat" class="child__link">Статьи</a></li>
-      <li name="about-autor" class="list-menu__child"><a href="#about-auto" class="child__link">Об авторе</a></li>
-      <li name="contacts" class="list-menu__child"><a href="#contacts" class="child__link">Контакты</a></li>
+      <li class="list-menu__child"><a href="#about-us" class="child__link">О нас</a></li>
+      <li class="list-menu__child"><a href="#generator" class="child__link">Генератор</a></li>
+      <li class="list-menu__child"><a href="#quastion" class="child__link">Вопросы</a></li>
+      <li class="list-menu__child"><a href="#stat" class="child__link">Статьи</a></li>
+      <li class="list-menu__child"><a href="#about-auto" class="child__link">Об авторе</a></li>
+      <li
+      class="list-menu__child"><a href="#contacts" class="child__link">Контакты</a></li>
+        <li class="list-menu__child">
+          <button class="btn-lang lang-ru">ru</button> <span>|</span>
+          <button class="btn-lang lang-en">en</button>
+        </li>
     </ul>
-
     <ul class="list-social">
       <li class="list-social__child-svg">
         <a href="https://www.instagram.com/mguseva_ya/" class="link-svg">
-          <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <path d="M505,257c0,34.8-0.7,69.7,0.2,104.5c1.5,61.6-37.2,109.2-86.5,130.4c-19.8,8.5-40.6,13-62.1,13c-67.3,0.1-134.7,1-202-0.3   c-50.7-1-92.4-22.2-122.3-64c-15.7-22-23.2-47-23.2-74.1c0-71.7,0-143.3,0-215c0-58.5,28.5-99.4,79.1-126C110.2,14,134.1,9.1,159,9   c65.3,0,130.7-0.4,196,0.2c50.7,0.4,93,19.8,124.2,60.6c17.4,22.8,25.8,49,25.8,77.8C505,184,505,220.5,505,257z M46,257   c0,36.7,0,73.3,0,110c0,16.4,3.8,31.8,12.3,45.7c22.3,36.5,56,54.3,97.8,55c67.1,1,134.3,0.4,201.5,0.2c16.5,0,32.5-3.4,47.4-10.5   c40.6-19.4,63.3-50.3,63.1-96.7c-0.4-71-0.1-142-0.1-213c0-20.1-5.7-38.5-17.6-54.7c-23-31.1-54.8-46.4-92.8-46.8   c-67-0.8-134-0.3-201-0.2c-14.3,0-28.1,2.9-41.5,7.9c-36.8,13.7-71,48.4-69.4,99.5C46.9,188,46,222.5,46,257z"/><path d="M257.6,363c-64.5,0-116.5-51.4-116.6-115.4c-0.1-63,52.3-114.6,116.4-114.6c64.3-0.1,116.5,51.4,116.6,114.9   C374,311.3,321.9,362.9,257.6,363z M257.6,326c43.9,0,79.5-35.1,79.4-78.3c-0.1-42.8-35.7-77.8-79.4-77.8   c-43.9,0-79.7,34.9-79.7,78C178,291.1,213.7,326.1,257.6,326z"/><path d="M387.5,98c13.5,0,24.5,11.5,24.5,25.6c-0.1,14.1-11.2,25.5-24.7,25.4c-13.3-0.1-24.2-11.5-24.2-25.3   C363,109.6,374,98,387.5,98z"/>
-          </svg>
+          <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"
+          xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M505,257c0,34.8-0.7,69.7,0.2,104.5c1.5,61.6-37.2,109.2-86.5,130.4c-19.8,8.5-40.6,13-62.1,13c-67.3,0.1-134.7,1-202-0.3   c-50.7-1-92.4-22.2-122.3-64c-15.7-22-23.2-47-23.2-74.1c0-71.7,0-143.3,0-215c0-58.5,28.5-99.4,79.1-126C110.2,14,134.1,9.1,159,9   c65.3,0,130.7-0.4,196,0.2c50.7,0.4,93,19.8,124.2,60.6c17.4,22.8,25.8,49,25.8,77.8C505,184,505,220.5,505,257z M46,257   c0,36.7,0,73.3,0,110c0,16.4,3.8,31.8,12.3,45.7c22.3,36.5,56,54.3,97.8,55c67.1,1,134.3,0.4,201.5,0.2c16.5,0,32.5-3.4,47.4-10.5   c40.6-19.4,63.3-50.3,63.1-96.7c-0.4-71-0.1-142-0.1-213c0-20.1-5.7-38.5-17.6-54.7c-23-31.1-54.8-46.4-92.8-46.8   c-67-0.8-134-0.3-201-0.2c-14.3,0-28.1,2.9-41.5,7.9c-36.8,13.7-71,48.4-69.4,99.5C46.9,188,46,222.5,46,257z"
+            />
+            <path d="M257.6,363c-64.5,0-116.5-51.4-116.6-115.4c-0.1-63,52.3-114.6,116.4-114.6c64.3-0.1,116.5,51.4,116.6,114.9   C374,311.3,321.9,362.9,257.6,363z M257.6,326c43.9,0,79.5-35.1,79.4-78.3c-0.1-42.8-35.7-77.8-79.4-77.8   c-43.9,0-79.7,34.9-79.7,78C178,291.1,213.7,326.1,257.6,326z"
+            />
+            <path d="M387.5,98c13.5,0,24.5,11.5,24.5,25.6c-0.1,14.1-11.2,25.5-24.7,25.4c-13.3-0.1-24.2-11.5-24.2-25.3   C363,109.6,374,98,387.5,98z"
+            /> </svg>
         </a>
-        
       </li>
       <li class="list-social__child-svg">
         <a href="https://vk.com/public4603016" class="link-svg">
-          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="25px" height="25px" viewBox="0 0 548.358 548.358" style="enable-background:new 0 0 548.358 548.358;"
-          xml:space="preserve">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="25px" height="25px" viewBox="0 0 548.358 548.358"
+          style="enable-background:new 0 0 548.358 548.358;" xml:space="preserve">
             <path d="M545.451,400.298c-0.664-1.431-1.283-2.618-1.858-3.569c-9.514-17.135-27.695-38.167-54.532-63.102l-0.567-0.571
          l-0.284-0.28l-0.287-0.287h-0.288c-12.18-11.611-19.893-19.418-23.123-23.415c-5.91-7.614-7.234-15.321-4.004-23.13
          c2.282-5.9,10.854-18.36,25.696-37.397c7.807-10.089,13.99-18.175,18.556-24.267c32.931-43.78,47.208-71.756,42.828-83.939
@@ -94,466 +89,325 @@
          c6.187,4.473,11.99,9.996,17.418,16.56c5.425,6.57,11.943,13.941,19.555,22.124c7.617,8.186,14.277,14.271,19.985,18.274
          l5.708,3.426c3.812,2.286,8.761,4.38,14.853,6.283c6.081,1.902,11.409,2.378,15.984,1.427l73.087-1.14
          c7.229,0,12.854-1.197,16.844-3.572c3.998-2.379,6.373-5,7.139-7.851c0.764-2.854,0.805-6.092,0.145-9.712
-            C546.782,404.25,546.115,401.725,545.451,400.298z"/>
-          </svg>
+            C546.782,404.25,546.115,401.725,545.451,400.298z" /> </svg>
         </a>
-        
       </li>
       <li class="list-social__child-svg">
         <a href="https://www.facebook.com/groups/158770154221894/" class="link-svg">
-          <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <path d="M308.3,508.5c-2.5,0.1-4.1,0.3-5.7,0.3c-34.2,0-68.3-0.1-102.5,0.1c-4.8,0-6.1-1.3-6.1-6.1c0.1-79.6,0.1-159.3,0.1-238.9   c0-2.1,0-4.2,0-6.9c-18.6,0-36.7,0-55.1,0c0-28.4,0-56.3,0-85c1.9,0,3.7,0,5.4,0c15,0,30-0.1,45,0.1c3.8,0,4.8-1.1,4.8-4.8   c-0.2-22.3-0.2-44.7,0-67c0.1-15.6,2.6-30.8,9.8-44.9c10.3-19.9,26.6-32.8,47.2-40.8c16.8-6.6,34.5-9,52.3-9.3   c29-0.4,58-0.2,87-0.3c2.7,0,4.9-0.1,4.9,3.7c-0.1,27.5-0.1,55-0.1,82.5c0,0.3-0.1,0.6-0.5,1.9c-1.7,0-3.6,0-5.5,0   c-18,0-36-0.1-54,0c-10.4,0-18.8,4.2-24.1,13.3c-1.6,2.7-2.6,6.2-2.6,9.4c-0.3,17,0,34-0.2,51c0,4,1.2,5.1,5.1,5.1   c25-0.2,50-0.1,75-0.1c2,0,3.9,0,7.3,0c-3.5,28.6-6.9,56.6-10.4,84.9c-26,0-51.3,0-77.1,0C308.3,340.8,308.3,424.4,308.3,508.5z"/>
-          </svg>
+          <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"
+          xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M308.3,508.5c-2.5,0.1-4.1,0.3-5.7,0.3c-34.2,0-68.3-0.1-102.5,0.1c-4.8,0-6.1-1.3-6.1-6.1c0.1-79.6,0.1-159.3,0.1-238.9   c0-2.1,0-4.2,0-6.9c-18.6,0-36.7,0-55.1,0c0-28.4,0-56.3,0-85c1.9,0,3.7,0,5.4,0c15,0,30-0.1,45,0.1c3.8,0,4.8-1.1,4.8-4.8   c-0.2-22.3-0.2-44.7,0-67c0.1-15.6,2.6-30.8,9.8-44.9c10.3-19.9,26.6-32.8,47.2-40.8c16.8-6.6,34.5-9,52.3-9.3   c29-0.4,58-0.2,87-0.3c2.7,0,4.9-0.1,4.9,3.7c-0.1,27.5-0.1,55-0.1,82.5c0,0.3-0.1,0.6-0.5,1.9c-1.7,0-3.6,0-5.5,0   c-18,0-36-0.1-54,0c-10.4,0-18.8,4.2-24.1,13.3c-1.6,2.7-2.6,6.2-2.6,9.4c-0.3,17,0,34-0.2,51c0,4,1.2,5.1,5.1,5.1   c25-0.2,50-0.1,75-0.1c2,0,3.9,0,7.3,0c-3.5,28.6-6.9,56.6-10.4,84.9c-26,0-51.3,0-77.1,0C308.3,340.8,308.3,424.4,308.3,508.5z"
+            /> </svg>
         </a>
-        
       </li>
     </ul>
-
   </div>
   <header class="header-block">
     <div class="container container-header">
-      <a href="index.html" class="logo-block">
-        <img class="logo-block-img" src="img/logo2.png" alt="logo">
-      </a>
+      <a class="logo-block"> <img class="logo-block-img" src="img/logo2.png" alt="logo"> </a>
       <button class="header-burger-menu">
-        <svg class="svg-cancel" class="burger-svg" width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="30" height="3" fill="#333333"/>
-          <rect y="10" width="30" height="3" fill="#333333"/>
-          <rect y="20" width="30" height="3" fill="#333333"/>
-        </svg>
+        <svg class="burger-svg" width="30" height="23" viewBox="0 0 30 23"
+        fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="30" height="3" fill="#333333" />
+          <rect y="10" width="30" height="3" fill="#333333" />
+          <rect y="20" width="30" height="3" fill="#333333" /> </svg>
       </button>
-
       <div class="header-menu">
         <ul class="list-menu">
           <li class="list-menu__child"><a href="#about-us" class="child__link">О нас</a></li>
           <li class="list-menu__child"><a href="#generator" class="child__link">Генератор</a></li>
-          <li class="list-menu__child"><a href="#quastion"  class="child__link">Вопросы</a></li>
-          <li class="list-menu__child"><a href="#stat" class="child__link">Статьи</a></li>
-          <li class="list-menu__child"><a href="#about-auto" class="child__link">Об авторе</a></li>
-          <li class="list-menu__child"><a href="#contacts" class="child__link">Контакты</a></li>
+          <li
+          class="list-menu__child"><a href="#quastion" class="child__link">Вопросы</a></li>
+            <li
+            class="list-menu__child"><a href="#stat" class="child__link">Статьи</a></li>
+              <li class="list-menu__child"><a href="#about-auto" class="child__link">Об авторе</a></li>
+              <li class="list-menu__child"><a href="#contacts" class="child__link">Контакты</a></li>
         </ul>
-  
-        <ul class="list-social">
-          <li class="list-social__child-svg">
-            <a href="https://www.instagram.com/mguseva_ya/" class="link-svg">
-              <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <path d="M505,257c0,34.8-0.7,69.7,0.2,104.5c1.5,61.6-37.2,109.2-86.5,130.4c-19.8,8.5-40.6,13-62.1,13c-67.3,0.1-134.7,1-202-0.3   c-50.7-1-92.4-22.2-122.3-64c-15.7-22-23.2-47-23.2-74.1c0-71.7,0-143.3,0-215c0-58.5,28.5-99.4,79.1-126C110.2,14,134.1,9.1,159,9   c65.3,0,130.7-0.4,196,0.2c50.7,0.4,93,19.8,124.2,60.6c17.4,22.8,25.8,49,25.8,77.8C505,184,505,220.5,505,257z M46,257   c0,36.7,0,73.3,0,110c0,16.4,3.8,31.8,12.3,45.7c22.3,36.5,56,54.3,97.8,55c67.1,1,134.3,0.4,201.5,0.2c16.5,0,32.5-3.4,47.4-10.5   c40.6-19.4,63.3-50.3,63.1-96.7c-0.4-71-0.1-142-0.1-213c0-20.1-5.7-38.5-17.6-54.7c-23-31.1-54.8-46.4-92.8-46.8   c-67-0.8-134-0.3-201-0.2c-14.3,0-28.1,2.9-41.5,7.9c-36.8,13.7-71,48.4-69.4,99.5C46.9,188,46,222.5,46,257z"/><path d="M257.6,363c-64.5,0-116.5-51.4-116.6-115.4c-0.1-63,52.3-114.6,116.4-114.6c64.3-0.1,116.5,51.4,116.6,114.9   C374,311.3,321.9,362.9,257.6,363z M257.6,326c43.9,0,79.5-35.1,79.4-78.3c-0.1-42.8-35.7-77.8-79.4-77.8   c-43.9,0-79.7,34.9-79.7,78C178,291.1,213.7,326.1,257.6,326z"/><path d="M387.5,98c13.5,0,24.5,11.5,24.5,25.6c-0.1,14.1-11.2,25.5-24.7,25.4c-13.3-0.1-24.2-11.5-24.2-25.3   C363,109.6,374,98,387.5,98z"/>
-              </svg>
-            </a>
-            
-          </li>
-          <li class="list-social__child-svg">
-            <a href="https://vk.com/public4603016" class="link-svg">
-              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="25px" height="25px" viewBox="0 0 548.358 548.358" style="enable-background:new 0 0 548.358 548.358;"
-              xml:space="preserve">
-                <path d="M545.451,400.298c-0.664-1.431-1.283-2.618-1.858-3.569c-9.514-17.135-27.695-38.167-54.532-63.102l-0.567-0.571
-             l-0.284-0.28l-0.287-0.287h-0.288c-12.18-11.611-19.893-19.418-23.123-23.415c-5.91-7.614-7.234-15.321-4.004-23.13
-             c2.282-5.9,10.854-18.36,25.696-37.397c7.807-10.089,13.99-18.175,18.556-24.267c32.931-43.78,47.208-71.756,42.828-83.939
-             l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712c-4.764-1.427-10.853-1.663-18.278-0.712l-82.224,0.568
-             c-1.332-0.472-3.234-0.428-5.712,0.144c-2.475,0.572-3.713,0.859-3.713,0.859l-1.431,0.715l-1.136,0.859
-             c-0.952,0.568-1.999,1.567-3.142,2.995c-1.137,1.423-2.088,3.093-2.848,4.996c-8.952,23.031-19.13,44.444-30.553,64.238
-             c-7.043,11.803-13.511,22.032-19.418,30.693c-5.899,8.658-10.848,15.037-14.842,19.126c-4,4.093-7.61,7.372-10.852,9.849
-             c-3.237,2.478-5.708,3.525-7.419,3.142c-1.715-0.383-3.33-0.763-4.859-1.143c-2.663-1.714-4.805-4.045-6.42-6.995
-             c-1.622-2.95-2.714-6.663-3.285-11.136c-0.568-4.476-0.904-8.326-1-11.563c-0.089-3.233-0.048-7.806,0.145-13.706
-             c0.198-5.903,0.287-9.897,0.287-11.991c0-7.234,0.141-15.085,0.424-23.555c0.288-8.47,0.521-15.181,0.716-20.125
-             c0.194-4.949,0.284-10.185,0.284-15.705s-0.336-9.849-1-12.991c-0.656-3.138-1.663-6.184-2.99-9.137
-             c-1.335-2.95-3.289-5.232-5.853-6.852c-2.569-1.618-5.763-2.902-9.564-3.856c-10.089-2.283-22.936-3.518-38.547-3.71
-             c-35.401-0.38-58.148,1.906-68.236,6.855c-3.997,2.091-7.614,4.948-10.848,8.562c-3.427,4.189-3.905,6.475-1.431,6.851
-             c11.422,1.711,19.508,5.804,24.267,12.275l1.715,3.429c1.334,2.474,2.666,6.854,3.999,13.134c1.331,6.28,2.19,13.227,2.568,20.837
-             c0.95,13.897,0.95,25.793,0,35.689c-0.953,9.9-1.853,17.607-2.712,23.127c-0.859,5.52-2.143,9.993-3.855,13.418
-             c-1.715,3.426-2.856,5.52-3.428,6.28c-0.571,0.76-1.047,1.239-1.425,1.427c-2.474,0.948-5.047,1.431-7.71,1.431
-             c-2.667,0-5.901-1.334-9.707-4c-3.805-2.666-7.754-6.328-11.847-10.992c-4.093-4.665-8.709-11.184-13.85-19.558
-             c-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267
-             c-4.952-10.185-9.329-20.037-13.134-29.554c-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-0.859c-0.95-0.76-2.475-1.567-4.567-2.427
-             c-2.095-0.859-4.281-1.475-6.567-1.854l-78.229,0.568c-7.994,0-13.418,1.811-16.274,5.428l-1.143,1.711
-             C0.288,140.146,0,141.668,0,143.763c0,2.094,0.571,4.664,1.714,7.707c11.42,26.84,23.839,52.725,37.257,77.659
-             c13.418,24.934,25.078,45.019,34.973,60.237c9.897,15.229,19.985,29.602,30.264,43.112c10.279,13.515,17.083,22.176,20.412,25.981
-             c3.333,3.812,5.951,6.662,7.854,8.565l7.139,6.851c4.568,4.569,11.276,10.041,20.127,16.416
-             c8.853,6.379,18.654,12.659,29.408,18.85c10.756,6.181,23.269,11.225,37.546,15.126c14.275,3.905,28.169,5.472,41.684,4.716h32.834
-             c6.659-0.575,11.704-2.669,15.133-6.283l1.136-1.431c0.764-1.136,1.479-2.901,2.139-5.276c0.668-2.379,1-5,1-7.851
-             c-0.195-8.183,0.428-15.558,1.852-22.124c1.423-6.564,3.045-11.513,4.859-14.846c1.813-3.33,3.859-6.14,6.136-8.418
-             c2.282-2.283,3.908-3.666,4.862-4.142c0.948-0.479,1.705-0.804,2.276-0.999c4.568-1.522,9.944-0.048,16.136,4.429
-             c6.187,4.473,11.99,9.996,17.418,16.56c5.425,6.57,11.943,13.941,19.555,22.124c7.617,8.186,14.277,14.271,19.985,18.274
-             l5.708,3.426c3.812,2.286,8.761,4.38,14.853,6.283c6.081,1.902,11.409,2.378,15.984,1.427l73.087-1.14
-             c7.229,0,12.854-1.197,16.844-3.572c3.998-2.379,6.373-5,7.139-7.851c0.764-2.854,0.805-6.092,0.145-9.712
-                C546.782,404.25,546.115,401.725,545.451,400.298z"/>
-              </svg>
-            </a>
-            
-          </li>
-          <li class="list-social__child-svg">
-            <a href="https://www.facebook.com/groups/158770154221894/" class="link-svg">
-              <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <path d="M308.3,508.5c-2.5,0.1-4.1,0.3-5.7,0.3c-34.2,0-68.3-0.1-102.5,0.1c-4.8,0-6.1-1.3-6.1-6.1c0.1-79.6,0.1-159.3,0.1-238.9   c0-2.1,0-4.2,0-6.9c-18.6,0-36.7,0-55.1,0c0-28.4,0-56.3,0-85c1.9,0,3.7,0,5.4,0c15,0,30-0.1,45,0.1c3.8,0,4.8-1.1,4.8-4.8   c-0.2-22.3-0.2-44.7,0-67c0.1-15.6,2.6-30.8,9.8-44.9c10.3-19.9,26.6-32.8,47.2-40.8c16.8-6.6,34.5-9,52.3-9.3   c29-0.4,58-0.2,87-0.3c2.7,0,4.9-0.1,4.9,3.7c-0.1,27.5-0.1,55-0.1,82.5c0,0.3-0.1,0.6-0.5,1.9c-1.7,0-3.6,0-5.5,0   c-18,0-36-0.1-54,0c-10.4,0-18.8,4.2-24.1,13.3c-1.6,2.7-2.6,6.2-2.6,9.4c-0.3,17,0,34-0.2,51c0,4,1.2,5.1,5.1,5.1   c25-0.2,50-0.1,75-0.1c2,0,3.9,0,7.3,0c-3.5,28.6-6.9,56.6-10.4,84.9c-26,0-51.3,0-77.1,0C308.3,340.8,308.3,424.4,308.3,508.5z"/>
-              </svg>
-            </a>
-            
-          </li>
-        </ul>
+        <div class="header_lang-btn">
+          <button class="btn-lang lang-ru">ru</button> <span>|</span>
+          <button class="btn-lang lang-en">en</button>
+        </div>
       </div>
-
     </div>
+    <div class="container-header-articles"> </div>
   </header>
-
   <main class="main">
-
     <section class="section-first">
       <div class="container-first">
-        <h1 class="header-screen">РОЖДЕНИЕ ЗВЕЗДЫ</h1>
-        <p class="text-screen">универсальная женская гимнастика</p>
+        <h1 class="header-screen lng-header-screen"></h1>
+        <p class="text-screen lng-header-text"></p>
       </div>
     </section>
-
     <section class="section-about-us">
       <div class="container-about-us">
         <div class="container">
-          <h2 id="about-us" class="header-about-us header">Подробная информация</h2>
-          <p class="text-about-us text">
-            Универсальная женская гимнастика «Рождение Звезды» - это простая и эффективная практика, которая учитывает особенности и потребности женского тела, дарит необходимый заряд 
-            бодрости и душевной гармонии, и выводит качество жизни на новый уровень.
-          </p>
+          <h2 id="about-us" class="header-about-us header lng-detail"></h2>
+          <p class="text-about-us text lng-detail-text"> </p>
         </div>
-
         <div class="swiper">
-          <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide swiper-slide-mar">
-              <img class="swiper-icon" src="img/9I2A4467.jpg" alt="">
-            </div>
-            <div class="swiper-slide swiper-slide-mar">
-              <img class="swiper-icon" src="img/9I2A4475.jpg" alt="">
-            </div>
-            <div class="swiper-slide swiper-slide-mar">
-              <img class="swiper-icon" src="img/9I2A4463.jpg" alt="">
-            </div>
-            
+            <div class="swiper-slide swiper-slide-mar"> <img class="swiper-icon" src="img/9I2A4467.jpg" alt=""> </div>
+            <div class="swiper-slide swiper-slide-mar"> <img class="swiper-icon" src="img/9I2A4475.jpg" alt=""> </div>
+            <div class="swiper-slide swiper-slide-mar"> <img class="swiper-icon" src="img/9I2A4463.jpg" alt=""> </div>
           </div>
         </div>
-
       </div>
     </section>
-
     <section class="container section-gimnastika">
       <div class="container-gimnastika">
-        <h2 class="header-yoga header">Женская гимнастика «Рождение&nbsp;Звезды»</h2>
+        <h2 class="header-yoga header lng-header-detail-gymnstic"></h2>
         <ul class="list-about-yoga">
           <li class="child-list-about-yoga">
-            <p class="text-child-yoga text">
-              Это 27 упражнений, из которых женщина сама составляет себе индивидуальные комплексы (3-5-7 упражнений) под конкретные ситуации и эмоциональное или физическое состояние, либо просто «комплекс дня».
-            </p>
+            <p class="text-child-yoga text lng-detail-gymnstic"> </p>
           </li>
           <li class="child-list-about-yoga">
-            <h3 class="header-child-yoga header">Упражнения</h3>
-            <p class="text-child-yoga text">
-              Упражнения  просты и, в то же время, очень эффективны. Они физиологичны именно для женщины и учитывают максимум потребностей ее организма. Во время занятий стимулируются гормональные железы, лимфоток, прорабатываются внутренние мышцы и органы, улучшается кровоток, разминаются позвоночник и суставы.
-
-            </p>
+            <h3 class="header-child-yoga header lng-header-detail-exercises"></h3>
+            <p class="text-child-yoga text lng-detail-exercises"> </p>
           </li>
           <li class="child-list-about-yoga">
-            <h3 class="header-child-yoga header">Результат</h3>
-            <p class="text-child-yoga text">
-              В результате занятий выравнивается гормональный фон и обменные процессы. Тело становится расслабленным, пластичным и упругим, все органы и мышцы приобретают физиологичный тонус и начинают правильно функционировать. Повышается иммунитет, перестают беспокоить простуды и прочие сезонные «насморки». Улучшается состояние кожи, ногтей, волос. Все тело приобретает гибкость, уходят боли в спине и суставах, выравнивается позвоночник, оздоравливается нервная система, улучшается осанка. Фигура простраивается изнутри внутренними мышцами, приобретает женственные, соблазнительные и естественные очертания. Меняются даже походка и движения, в женщине проявляется грация и рождается страсть. 
-            </p>
+            <h3 class="header-child-yoga header lng-header-detail-result"></h3>
+            <p class="text-child-yoga text lng-detail-result"> </p>
           </li>
           <li class="child-list-about-yoga">
-            <h3 class="header-child-yoga header">Воздействия на организм</h3>
-            <p class="text-child-yoga text">
-              Упражнения «Рождения Звезды» самым лучшим способом – мягкими растяжками, снимают с мышц зажимы и приводят их в естественный тонус, улучшают кровообращение. Также упражнения прокачивают внутренние мышцы живота, таза и ягодиц, разрабатывают тазобедренные суставы. Положительное влияние заметно уже через месяц занятий. Уходят неприятные и болезненные ощущения в критические дни, улучшается работа кишечника. Интимная жизнь становится ярче, усиливается чувственность и чувствительность, активизируется репродуктивная функция. Всего 15 минут в день вдумчивых занятий - и через год вы себя не узнаете!
-
-            </p>
+            <h3 class="header-child-yoga header lng-header-detail-impact-body"></h3>
+            <p class="text-child-yoga text lng-detail-impact-body"> </p>
           </li>
         </ul>
       </div>
     </section>
-
     <section class="section-generator">
-      <div class="container generator-container">
-        <a id="generator" class="header-genrator header">Генератор упражнений "Рождение&nbsp;Звезды"</a>
-        <p class="text">Выберите один или более из миров кликом на фотографию и сгенерируйте для себя индивидуальный комплекс упражнений.</p>
+      <div class="container generator-container"> <a id="generator" class="header-genrator header">Генератор упражнений "Рождение&nbsp;Звезды"</a>
+        <p class="text">Выберите один или более из миров кликом на фотографию и сгенерируйте
+          для себя индивидуальный комплекс упражнений.</p>
         <p class="text-generator text">Начните восстанавливать свой организм прямо сейчас!</p>
         <ul class="list-generator">
-
-          <li class="child-list-generator generator-phpto-up" data-path="up">
-            <h3 class="header-list-generator header">Верхний мир</h3>
-          </li>
-
-          <li class="child-list-generator generator-phpto-center" data-path="center">
-            <h3 class="header-list-generator header">Средний мир</h3>
-          </li>
-
-          <li class="child-list-generator generator-phpto-down" data-path="down">
-            <h3 class="header-list-generator header">Нижний мир</h3>
-          </li>
-
-          
-          
+          <li class="child-list-generator generator-phpto-up-main" data-path="up">
+            <h3 class="header-list-generator header lng-generator-world-up">Верхний мир</h3> </li>
+          <li class="child-list-generator generator-phpto-center-main"
+          data-path="center">
+            <h3 class="header-list-generator header lng-generator-world-center">Средний мир</h3> </li>
+          <li class="child-list-generator generator-phpto-down-main"
+          data-path="down">
+            <h3 class="header-list-generator header lng-generator-world-down">Нижний мир</h3> </li>
         </ul>
-        <a href="generator.html" class="btn-generator">СОЗДАТЬ КОМПЛЕКС</a>
-
-        <h3 id="quastion" class="header-practics header">Часто задаваемые вопросы</h3>
-
+        <button class="btn-generator-main">СОЗДАТЬ КОМПЛЕКС</button>
+        <h3 id="quastion" class="header-practics header lng-header-faq"></h3>
         <div id="accordion" class="painter__accardion">
-          <h3 class="accardion__header"><span class="acordion-span">Рекомендации по выполнению</span></h3>
+          <h3 class="accardion__header"><span class="acordion-span lng-faq-recommendations"></span></h3>
           <div class="accardion__drop">
-           <p class="text-accordion text">
-            Начинаем выполнение упражнений с исходного положения и заканчиваем в исходном положении. Все движения выполняются мягко, красиво и плавно, без чрезмерных усилий. Руки движутся по телу непрерывно, с небольшим давлением. Для тех упражнений, которые делаются в две стороны, после выполнения упражнения в одну сторону, возвращаемся в исходное положение, расслабляем все мышцы тела, сознательно расслабляем промежность, и затем выполняем упражнение в другую сторону. После выполнения упражнений также расслабляем все мышцы и промежность. Начинать выполнять упражнения можно в любую сторону. В гимнастике не надо тянуть носок, делать какие-то неестественные изгибы и прочее. Упражнения должны получаться КРАСИВО – это главный критерий. Второй критерий – удовольствие.
-          </p>
-          </div>
-
-          <h3 class="accardion__header"><span class="acordion-span">Для кого эта практика?</span></h3>
-          <div class="accardion__drop">
-            <p class="text-accordion text">
-              Для женщин. Любого возраста, состояния здоровья, уровня физической подготовки.
+            <p class="text-accordion text lng-faq-recommendations-text">
             </p>
-          
           </div>
-
-          <h3 class="accardion__header"><span class="acordion-span">Что отличает эту практику от других?</span></h3>
+          <h3 class="accardion__header"><span class="acordion-span lng-faq-whom"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Упражнения делаются самостоятельно, заниматься можно дома или в любом месте. Упражнения достаточно простые, выполнение комплекса занимает 10-15 минут. Эффект сравним с часовой нагрузкой в тренажерном зале.
-            </p>
-            
-            
+            <p class="text-accordion text lng-faq-whom-text"> </p>
           </div>
-
-          <h3 class="accardion__header"><span class="acordion-span">Что дает эта практика?</span></h3>
+          <h3 class="accardion__header"><span class="acordion-span lng-faq-distinguishes"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Упражнения запускают механизмы самоисцеления, таким образом оздоравливается весь организм (женские органы, внутренние органы, позвоночник). Тело становится подтянутым и красивым, выносливым, сильным и при этом женственным.
-            </p>
-            
+            <p class="text-accordion text lng-faq-distinguishes-text"> </p>
           </div>
-
-          <h3 class="accardion__header"><span class="acordion-span">Кому в первую очередь мы рекомендуем гимнастику?</span></h3>
+          <h3 class="accardion__header"><span class="acordion-span lng-faq-give"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Для женщин с возрастом ЗА - для того, чтобы поправить уровень общего здоровья. 
-              Для тех женщин, кто желает, но по каким-то причинам не может забеременеть.
-              Для тех, кто мечтает о легкой беременности, родах и восстановлении после них. 
-              Для женщин, испытывающих эмоциональные кризисы.
-              Каждой женщине этот комплекс даёт знание о себе, необходимое для того, чтобы чувствовать себя целостной - красивой, мудрой, честной с самой собою, именно такой, какая она есть.
-  
-            </p>
-            
+            <p class="text-accordion text lng-faq-give-text"> </p>
           </div>
-
-          <h3 class="accardion__header"><span class="acordion-span">Как выбрать свои упражнения?</span></h3>
+          <h3 class="accardion__header"><span class="acordion-span lng-faq-recommend"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              В гимнастике всего 27 упражнений. Каждое из них дает определенную физическую нагрузку. Мы рекомендуем начать освоение гимнастики с 7 упражнений. Для этого с помощью генератора вы выбираете 7 упражнений из 27 (по 2 из каждого мира и 1 из всех) и таким образом составляется ИНДИВИДУАЛЬНЫЙ комплекс. Это тот комплекс, с которого вы НАЧИНАЕТЕ осваивать гимнастику в течение первого месяца, перейдя затем к постепенному освоению ВСЕХ упражнений, также определяя их с помощью генератора.
-
-            </p>
-            
+            <p class="text-accordion text lng-faq-recommend-text"> </p>
           </div>
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">Как выполнять свой комплекс, чтобы было эффективно?</span></h3>
+          <h3 class="accardion__header"><span class="acordion-span lng-faq-choose"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Рекомендуется первое время (1-3 месяца) заниматься 4 раза в неделю по 7 упражнений в день, выполняя 1-3 повторений каждого упражнения. Но это не жесткая рекомендация. Количество упражнени и порядок их выполнения могут быть любыми, чувствуйте по себе.
-            </p>
-            
+            <p class="text-accordion text lng-faq-choose-text"> </p>
           </div>
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">В какое время суток лучше делать гимнастику?</span></h3>
+          <h3 class="accardion__header "><span class="acordion-span lng-faq-complex"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Заниматься гимнастикой можно в любое время суток. Кто-то на первых порах после гимнастики засыпает, а кто-то, напротив, бодрится. Поэтому найдите удобный для себя режим и занимайтесь в удовольствие.
-            </p>
-            
+            <p class="text-accordion text lng-faq-complex-text"> </p>
           </div>
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">В какой обстановке лучше делать гимнастику?</span></h3>
+          <h3 class="accardion__header "><span class="acordion-span lng-faq-time"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Гимнастика – это медитативная практика, которая может привести вас к единению вашего духа, души и тела. В этом процессе не может быть котика, собачки, бегающего малыша или включенного телевизора. Делайте гимнастику в одиночестве, идеально: на природе босиком, но можно и в помещении.
-            </p>
-            
+            <p class="text-accordion text lng-faq-time-text"> </p>
           </div>
-
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">Что такое выброс?</span></h3>
+          <h3 class="accardion__header "><span class="acordion-span lng-faq-best"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Это энергетическое упражнение, выполняемое воображением. Выполнять рекомендуется в конце каждого комплекса, а также по необходимости особенно, если вы почувствовали головокружение, учащенное сердцебиение, необъяснимую агрессию и т.д. Также показанием к выполнению выброса является наличие серьезных хронических заболеваний.
-
-            </p>
-            
+            <p class="text-accordion text lng-faq-best-text"> </p>
           </div>
-
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">Как делать выброс?</span></h3>
+          <h3 class="accardion__header "><span class="acordion-span lng-faq-release"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Вы становитесь в положение любого мира, закрываете глаза и представляете как сверху вниз, вдоль позвоночника выходит отработанная энергия. ЧЕРЕЗ ПРОМЕЖНОСТЬ. Промежность при этом максимально расслабляется, как и все тело. Все напряжения, которые получается расслабить - надо расслаблять, и так секунд 30-60. Когда почувствуете, что все лишнее - отработанное вышло, можно заканчивать. Во время выполнения упражнений набор энергии происходит автоматически, а выброс не всегда. И в таких случаях его нужно делать принудительно.
-            </p>
-            
+            <p class="text-accordion text lng-faq-release-text"> </p>
           </div>
-
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">Есть ли противопоказания?</span></h3>
+          <h3 class="accardion__header "><span class="acordion-span lng-faq-release-how"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Противопоказаний для женщин нет. Есть показания к более осторожному освоению практики: 
-              <br>
-              - возраст старше 40 лет, 
-              <br>
-              - различные хронические заболевания. 
-              <br>
-              В таких случаях мы рекомендуем очень внимательно слушать себя и свое тело, когда вы делаете упражнения, и в случае малейшего изменения состояния в худшую сторону – снижать нагрузку, либо прекращать выполнение упражнений.
-            </p>
-            
+            <p class="text-accordion text lng-faq-release-how-text"> </p>
           </div>
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">Если есть серьезные проблемы со здоровьем</span></h3>
+          <h3 class="accardion__header "><span class="acordion-span lng-faq-contraindications"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              В этом случае рекомендуется начать практику с освоения исходных положений. Для этого становитесь по очереди в базовые положения трех миров: сначала верхний, потом средний, потом нижний. В каждом стойте примерно по 1 минуте и попробуйте в этом положении расслабиться.
+            <p class="text-accordion text lng-faq-contraindications-text">
             </p>
-            
           </div>
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">Как начать заниматься, если вы уже беременны</span></h3>
+          <h3 class="accardion__header "><span class="acordion-span lng-faq-pregnant"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Если вы себя чувствуете спокойно и уверенно, особых переживаний по поводу здоровья не имеете, начинайте также как и все, просто тяните 7 упражнений и делайте.
-              <br> 
-              Если вы сомневаетесь насчет сложных нагрузок, тогда выбирайте себе комплекс из этих упражнений:
-              <br>
-              Верхний мир 1,2,3,7,8,9
-              <br>
-              Средний мир 1,4,6,7,8,9
-              <br>
-              Нижний мир 1,2,3,6,7
-              <br>
-              Если вам совсем сложно выполнить хоть какое-то упражнение, тогда начните с того, что стойте в базовых положениях трех миров. Сначала верхнего, потом среднего, потом нижнего. И через какое-то время (неделю, например) можно начинать делать упражнения - те, которые вам приглянутся. Главное, не усердствуйте.
-            </p>
-            
+            <p class="text-accordion text lng-faq-pregnant-text"> </p>
           </div>
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">Есть ли противопоказания?</span></h3>
+          <h3 class="accardion__header "><span class="acordion-span lng-faq-girls"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Противопоказаний для женщин нет. Есть показания к более осторожному освоению практики: 
-              <br>
-              - возраст старше 40 лет, 
-              <br>
-              - различные хронические заболевания. 
-              <br>
-              В таких случаях мы рекомендуем очень внимательно слушать себя и свое тело, когда вы делаете упражнения, и в случае малейшего изменения состояния в худшую сторону – снижать нагрузку, либо прекращать выполнение упражнений.
-            </p>
-            
+            <p class="text-accordion text lng-faq-girls-text"> </p>
           </div>
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">Можно ли девочкам делать гимнастику Рождение Звезды?</span></h3>
+          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span lng-faq-combined"></span></h3>
           <div class="accardion__drop">
-            <p class="text-accordion text">
-              Нет, нельзя
-            </p>
-            
+            <p class="text-accordion text lng-faq-combined-text"> </p>
           </div>
-
-          <h3 class="accardion__header accardion__header-border-bot"><span class="acordion-span">Как гимнастика сочетается с  другими формами физической активности?</span></h3>
-          <div class="accardion__drop">
-            <p class="text-accordion text">
-              Мы не рекомендуем смешивать эту гимнастику с восточными и энергетическими практиками (йога, цигун и др.). При этом с любыми другими видами физической активности, например, с пробежкой, с отжиманиями, растяжкой, танцами и др., если вам комфортно, то сочетать можно.
-            </p>
-            
-          </div>
-
         </div>
-      
-        
       </div>
     </section>
-
     <section class="container section-blog">
       <div class="container-blog">
-        <h2 id="stat" class="header-blog header">Статьи</h2>
-        <div class="list-blog">
-          <a href="html/index-1.html" class="child-list-blog child-list-blog-photo1">
-            <h3 class="child-header-blog">История появления "Рождение Звезды"</h3>
-          </a>
-          <a href="html/index-2.html"  class="child-list-blog child-list-blog-photo2">
-            <h3 class="child-header-blog">Ключи к гимнастике</h3>
-          </a>
-          <a href="html/index-3.html"  class="child-list-blog child-list-blog-photo3">
-            <h3 class="child-header-blog">Положительные эффекты от занятий гимнастикой</h3>
-          </a>
-          <a href="html/index-4.html"  class="child-list-blog child-list-blog-photo4">
-            <h3 class="child-header-blog">Как работают мышцы в гимнастике?</h3>
-          </a>
-          <a href="html/index-5.html"  class="child-list-blog child-list-blog-photo5">
-            <h3 class="child-header-blog">Гимнастика и болезни</h3>
-          </a>
-          <a href="html/index-6.html"  class="child-list-blog child-list-blog-photo6">
-            <h3 class="child-header-blog">Женский живот</h3>
-          </a>
-          <a href="html/index-7.html"  class="child-list-blog child-list-blog-photo7">
-            <h3 class="child-header-blog">О трепетном. О груди</h3>
-          </a>
-          <a href="html/index-8.html"  class="child-list-blog child-list-blog-photo8">
-            <h3 class="child-header-blog">Про женские "радости"</h3>
-          </a>
-          <a href="html/index-9.html"  class="child-list-blog child-list-blog-photo9">
-            <h3 class="child-header-blog">Кризисы в гимнастике</h3>
-          </a>
-        </div>
+        <h2 id="stat" class="header-blog header lng-articles"></h2>
+        <ul class="list-blog">
+          <li class="child-list-blog child-list-blog-photo1 " data-artic="1">
+            <h3 class="child-header-blog lng-articles-originated"></h3> </li>
+          <li class="child-list-blog child-list-blog-photo2" data-artic="2">
+            <h3 class="child-header-blog lng-articles-keys"></h3> </li>
+          <li class="child-list-blog child-list-blog-photo3" data-artic="3">
+            <h3 class="child-header-blog lng-articles-effects"></h3> </li>
+          <li class="child-list-blog child-list-blog-photo4" data-artic="4">
+            <h3 class="child-header-blog lng-articles-muscles"></h3> </li>
+          <li class="child-list-blog child-list-blog-photo5" data-artic="5">
+            <h3 class="child-header-blog lng-articles-illness"></h3> </li>
+          <li class="child-list-blog child-list-blog-photo6" data-artic="6">
+            <h3 class="child-header-blog lng-articles-tummy"></h3> </li>
+          <li class="child-list-blog child-list-blog-photo7" data-artic="7">
+            <h3 class="child-header-blog lng-articles-vitals"></h3> </li>
+          <li class="child-list-blog child-list-blog-photo8" data-artic="8">
+            <h3 class="child-header-blog lng-articles-joys"></h3> </li>
+          <li class="child-list-blog child-list-blog-photo9" data-artic="9">
+            <h3 class="child-header-blog lng-articles-crises"></h3> </li>
+        </ul>
       </div>
     </section>
-
     <section class="section-about-autor">
-
-      <h2 id="about-auto" class="header-about-autor header">Об авторе</h2>
+      <h2 id="about-auto" class="header-about-autor header lng-author-header"></h2>
       <div class="container container-block-autor">
-        <div class="autor-maria">
-          <img class="autor-photo" src="img/mar-1.jpg" alt="">
-        </div>
-        <div class="block-autor-text">
-          <h3 class="header-name-autor">Мария Гусева</h3>
-          <p class="text-autor text">
-            Я – Мария Гусева, автор Универсальной женской гимнастики «Рождение Звезды», практикующий психолог, блогер, создатель форума «Рождение Звезды». Я распространяю женскую гимнастику, веду семинары и тренинги о гимнастике, и не только о ней, с 2004 года.
-          </p>
-          <h3 class="header-name-autor">Каковы мои цели и задачи?</h3>
-          <p class="text-autor text">
-            Чтобы как можно большее количество женщин УЗНАЛИ про существование этой практики. Которая занимает 15 минут в день и дает такие потрясающие результаты. 
-            В идеале, я хотела бы, чтобы про «Рождение Звезды» знали так же, как знают про йогу. Мне неважно, сколько женщин будут гимнастику делать, мне важно – сколько женщин про гимнастику знают, а значит у них появляется выбор. 
-            Итак, я – распространяю информацию. Сначала я вела семинары и набирала группы в социальных сетях. Потом я стала появляться на ТВ, потом сняла видеокурс. За время моей работы тысячи женщин узнали про гимнастику. Я рада – моя задача осуществляется, моя работа приносит результаты. 
-            Я пишу статьи. Делаю фотографии. Обучаю инструкторов. В общем, делаю все то, что, на мой взгляд, способствует распространению знаний о гимнастике. 
-            Я провела немало семинаров, и меня радует,  что в разных города и странах возникают и развиваются группы по гимнастике.
-          </p>
-          <h3 class="header-name-autor">Мое послание женщинам мира о гимнастике таково: делайте гимнастику для здоровья.</h3>
-          <p class="text-autor text">
-            В здоровом теле – здоровый дух. Если ваше тело станет действительно здоровым, все остальное, что кажется вам сейчас важным, как минимум, изменится. А скорее всего, перестанет беспокоить. Появятся новые интересы, проявится новая жизнь. Новая жизнь в здоровом теле! Источник всего - в вас. Просто обнаружьте его и дайте ему реализоваться. 15 минут в день для красоты и здоровья. Попробуйте!
-          </p>
-        </div>
+        <div class="autor-maria"> <img class="autor-photo" src="img/mar-1.jpg" alt=""> </div>
+        <div
+        class="block-autor-text">
+          <h3 class="header-name-autor lng-author-name"></h3>
+          <p class="text-autor text lng-author-name-text"> </p>
+          <h3 class="header-name-autor lng-author-goals"></h3>
+          <p class="text-autor text lng-author-goals-text"> </p>
+          <h3 class="header-name-autor"></h3>
+          <p class="text-autor text"> </p>
+      </div>
       </div>
     </section>
-    
   </main>
-
+  <article class="create-generator" style="display: none;">
+    <header class="header-container-generator">
+      <div class="container-header-generator">
+        <a class="logo-block-generator"> <img class="logo-block-img-generator" src="img/logo2.png" alt="logo">          </a>
+      </div>
+    </header>
+    <div class="container container-gener">
+      <ul class="list-generator">
+        <li class="child-list-generator-2 generator-phpto-up" data-path="up">
+          <div class="icon-generator">
+            <div class="grop-okey"> <img class="icon-okey" src="img/okkey.png" alt=""> </div>
+            <h3
+            class="header-list-generator header lng-generator-world-up-page">Верхний мир</h3>
+          </div>
+          <input class="input-generator" type="text" placeholder="Количество упражнений 1-9"
+          name="up" autocomplete="off"> </li>
+        <li class="child-list-generator-2 generator-phpto-center"
+        data-path="center">
+          <div class="icon-generator">
+            <div class="grop-okey"> <img class="icon-okey" src="img/okkey.png" alt=""> </div>
+            <h3
+            class="header-list-generator header lng-generator-world-center-page">Средний мир</h3>
+          </div>
+          <input class="input-generator" type="text" placeholder="Количество упражнений 1-9"
+          name="center" autocomplete="off"> </li>
+        <li class="child-list-generator-2 generator-phpto-down"
+        data-path="down">
+          <div class="icon-generator ">
+            <div class="grop-okey"> <img class="icon-okey" src="img/okkey.png" alt=""> </div>
+            <h3
+            class="header-list-generator header lng-generator-world-down-page">Нижний мир</h3>
+          </div>
+          <input class="input-generator" type="text" placeholder="Количество упражнений 1-9"
+          name="down" autocomplete="off"> </li>
+        <li class="child-list-generator-2 child-list-generator-2-mr generator-phpto-all"
+        data-path="allWorld">
+          <div class="icon-generator">
+            <div class="grop-okey"> <img class="icon-okey" src="img/okkey.png" alt=""> </div>
+            <h3
+            class="header-list-generator header">Все миры</h3>
+          </div>
+          <input class="input-generator" type="text" placeholder="Количество упражнений 1-27"
+          name="allWorld" autocomplete="off"> </li>
+      </ul>
+      <form class="form-gener">
+        <button class="btn-generator btn-generator-active">Начать</button>
+        <div>
+          <div class="trust-form">
+            <input class="label-input-gener" id="radio-label-1" type="radio"
+            name="gener" value="photo" checked>
+            <label for="radio-label-1" class="label-goup-gener lng-generator-radi-photo">Фото</label>
+            <input class="label-input-gener" id="radio-label-2"
+            type="radio" name="gener" value="video">
+            <label for="radio-label-2" class="label-goup-gener lng-generator-radi-video">Видео</label>
+          </div>
+          <div class="trust-form-check">
+            <input type="checkbox" id="checkbox-id" name="checkbox" class="gen-bot__form-chekbox"
+            checked>
+            <label for="checkbox-id" class="gen-bot__form-chekbox-label">Перемешать</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </article>
+  <article class="articles" style="display: none;">
+    <div class="article-btn">
+      <button class="articles-btn-back">
+        <svg class="svg-back" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <style>
+.cls-1 {
+  fill: none;
+}
+            </style>
+          </defs>
+          <title />
+          <g data-name="Layer 2" id="Layer_2">
+            <path d="M20,25a1,1,0,0,1-.71-.29l-8-8a1,1,0,0,1,0-1.42l8-8a1,1,0,1,1,1.42,1.42L13.41,16l7.3,7.29a1,1,0,0,1,0,1.42A1,1,0,0,1,20,25Z"
+            /> </g>
+          <g id="frame">
+            <rect class="cls-1" height="32" width="32" /> </g>
+        </svg>
+      </button>
+    </div>
+    <div class="container-articles "> </div>
+  </article>
   <footer class="footer">
     <div class="container contacts-container">
       <h2 class="header-contacts header">Контакты</h2>
-
       <div class="contact-group">
         <div class="contacts-connect">
           <h3 class="header-connect">Социальные сети</h3>
           <ul class="list-connect">
             <li class="child-connect">
-              <a href="https://www.facebook.com/groups/zvezda.gimnastika/?ref=share" class="child-link-contact">
-                <svg class="svg-contacts" enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <path d="M308.3,508.5c-2.5,0.1-4.1,0.3-5.7,0.3c-34.2,0-68.3-0.1-102.5,0.1c-4.8,0-6.1-1.3-6.1-6.1c0.1-79.6,0.1-159.3,0.1-238.9   c0-2.1,0-4.2,0-6.9c-18.6,0-36.7,0-55.1,0c0-28.4,0-56.3,0-85c1.9,0,3.7,0,5.4,0c15,0,30-0.1,45,0.1c3.8,0,4.8-1.1,4.8-4.8   c-0.2-22.3-0.2-44.7,0-67c0.1-15.6,2.6-30.8,9.8-44.9c10.3-19.9,26.6-32.8,47.2-40.8c16.8-6.6,34.5-9,52.3-9.3   c29-0.4,58-0.2,87-0.3c2.7,0,4.9-0.1,4.9,3.7c-0.1,27.5-0.1,55-0.1,82.5c0,0.3-0.1,0.6-0.5,1.9c-1.7,0-3.6,0-5.5,0   c-18,0-36-0.1-54,0c-10.4,0-18.8,4.2-24.1,13.3c-1.6,2.7-2.6,6.2-2.6,9.4c-0.3,17,0,34-0.2,51c0,4,1.2,5.1,5.1,5.1   c25-0.2,50-0.1,75-0.1c2,0,3.9,0,7.3,0c-3.5,28.6-6.9,56.6-10.4,84.9c-26,0-51.3,0-77.1,0C308.3,340.8,308.3,424.4,308.3,508.5z"/>
-                </svg>
+              <a href="https://www.facebook.com/groups/zvezda.gimnastika/?ref=share"
+              class="child-link-contact">
+                <svg class="svg-contacts" enable-background="new 0 0 512 512"
+                version="1.1" viewBox="0 0 512 512" xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M308.3,508.5c-2.5,0.1-4.1,0.3-5.7,0.3c-34.2,0-68.3-0.1-102.5,0.1c-4.8,0-6.1-1.3-6.1-6.1c0.1-79.6,0.1-159.3,0.1-238.9   c0-2.1,0-4.2,0-6.9c-18.6,0-36.7,0-55.1,0c0-28.4,0-56.3,0-85c1.9,0,3.7,0,5.4,0c15,0,30-0.1,45,0.1c3.8,0,4.8-1.1,4.8-4.8   c-0.2-22.3-0.2-44.7,0-67c0.1-15.6,2.6-30.8,9.8-44.9c10.3-19.9,26.6-32.8,47.2-40.8c16.8-6.6,34.5-9,52.3-9.3   c29-0.4,58-0.2,87-0.3c2.7,0,4.9-0.1,4.9,3.7c-0.1,27.5-0.1,55-0.1,82.5c0,0.3-0.1,0.6-0.5,1.9c-1.7,0-3.6,0-5.5,0   c-18,0-36-0.1-54,0c-10.4,0-18.8,4.2-24.1,13.3c-1.6,2.7-2.6,6.2-2.6,9.4c-0.3,17,0,34-0.2,51c0,4,1.2,5.1,5.1,5.1   c25-0.2,50-0.1,75-0.1c2,0,3.9,0,7.3,0c-3.5,28.6-6.9,56.6-10.4,84.9c-26,0-51.3,0-77.1,0C308.3,340.8,308.3,424.4,308.3,508.5z"
+                  /> </svg>
               </a>
             </li>
             <li class="child-connect">
               <a href="https://vk.com/gimnastika.zvezda" class="child-link-contact">
-                <svg class="svg-contacts" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  width="30px" height="30px" viewBox="0 0 548.358 548.358" style="enable-background:new 0 0 548.358 548.358;"
-                  xml:space="preserve">
+                <svg class="svg-contacts" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="30px" height="30px" viewBox="0 0 548.358 548.358"
+                style="enable-background:new 0 0 548.358 548.358;" xml:space="preserve">
                   <path d="M545.451,400.298c-0.664-1.431-1.283-2.618-1.858-3.569c-9.514-17.135-27.695-38.167-54.532-63.102l-0.567-0.571
                     l-0.284-0.28l-0.287-0.287h-0.288c-12.18-11.611-19.893-19.418-23.123-23.415c-5.91-7.614-7.234-15.321-4.004-23.13
                     c2.282-5.9,10.854-18.36,25.696-37.397c7.807-10.089,13.99-18.175,18.556-24.267c32.931-43.78,47.208-71.756,42.828-83.939
@@ -584,33 +438,40 @@
                     c6.187,4.473,11.99,9.996,17.418,16.56c5.425,6.57,11.943,13.941,19.555,22.124c7.617,8.186,14.277,14.271,19.985,18.274
                     l5.708,3.426c3.812,2.286,8.761,4.38,14.853,6.283c6.081,1.902,11.409,2.378,15.984,1.427l73.087-1.14
                     c7.229,0,12.854-1.197,16.844-3.572c3.998-2.379,6.373-5,7.139-7.851c0.764-2.854,0.805-6.092,0.145-9.712
-                    C546.782,404.25,546.115,401.725,545.451,400.298z"/>
-                </svg>
+                    C546.782,404.25,546.115,401.725,545.451,400.298z"
+                  /> </svg>
               </a>
             </li>
             <li class="child-connect">
-              <a href="https://t.me/zvezdagym" class="child-link-contact"><svg class="svg-contacts" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M 25.154297 3.984375 C 24.829241 3.998716 24.526384 4.0933979 24.259766 4.2011719 C 24.010014 4.3016357 23.055766 4.7109106 21.552734 5.3554688 C 20.048394 6.0005882 18.056479 6.855779 15.931641 7.7695312 C 11.681964 9.5970359 6.9042108 11.654169 4.4570312 12.707031 C 4.3650097 12.746607 4.0439208 12.849183 3.703125 13.115234 C 3.3623292 13.381286 3 13.932585 3 14.546875 C 3 15.042215 3.2360676 15.534319 3.5332031 15.828125 C 3.8303386 16.121931 4.144747 16.267067 4.4140625 16.376953 C 5.3912284 16.775666 8.4218473 18.015862 8.9941406 18.25 C 9.195546 18.866983 10.29249 22.222526 10.546875 23.044922 C 10.714568 23.587626 10.874198 23.927519 11.082031 24.197266 C 11.185948 24.332139 11.306743 24.45034 11.453125 24.542969 C 11.511635 24.579989 11.575789 24.608506 11.640625 24.634766 L 11.644531 24.636719 C 11.659471 24.642719 11.67235 24.652903 11.6875 24.658203 C 11.716082 24.668202 11.735202 24.669403 11.773438 24.677734 C 11.925762 24.726927 12.079549 24.757812 12.216797 24.757812 C 12.80196 24.757814 13.160156 24.435547 13.160156 24.435547 L 13.181641 24.419922 L 16.191406 21.816406 L 19.841797 25.269531 C 19.893193 25.342209 20.372542 26 21.429688 26 C 22.057386 26 22.555319 25.685026 22.875 25.349609 C 23.194681 25.014192 23.393848 24.661807 23.478516 24.21875 L 23.478516 24.216797 C 23.557706 23.798129 26.921875 6.5273437 26.921875 6.5273438 L 26.916016 6.5507812 C 27.014496 6.1012683 27.040303 5.6826405 26.931641 5.2695312 C 26.822973 4.8564222 26.536648 4.4608905 26.181641 4.2480469 C 25.826669 4.0352506 25.479353 3.9700339 25.154297 3.984375 z M 24.966797 6.0742188 C 24.961997 6.1034038 24.970391 6.0887279 24.962891 6.1230469 L 24.960938 6.1347656 L 24.958984 6.1464844 C 24.958984 6.1464844 21.636486 23.196371 21.513672 23.845703 C 21.522658 23.796665 21.481573 23.894167 21.439453 23.953125 C 21.379901 23.91208 21.257812 23.859375 21.257812 23.859375 L 21.238281 23.837891 L 16.251953 19.121094 L 12.726562 22.167969 L 13.775391 17.96875 C 13.775391 17.96875 20.331562 11.182109 20.726562 10.787109 C 21.044563 10.471109 21.111328 10.360953 21.111328 10.251953 C 21.111328 10.105953 21.035234 10 20.865234 10 C 20.712234 10 20.506484 10.14875 20.396484 10.21875 C 18.963383 11.132295 12.671823 14.799141 9.8515625 16.439453 C 9.4033769 16.256034 6.2896636 14.981472 5.234375 14.550781 C 5.242365 14.547281 5.2397349 14.548522 5.2480469 14.544922 C 7.6958673 13.491784 12.47163 11.434667 16.720703 9.6074219 C 18.84524 8.6937992 20.838669 7.8379587 22.341797 7.1933594 C 23.821781 6.5586849 24.850125 6.1218894 24.966797 6.0742188 z"/></svg></a>
+              <a href="https://t.me/zvezdagym" class="child-link-contact">
+                <svg class="svg-contacts" fill="#000000" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 30 30" width="30px" height="30px">
+                  <path d="M 25.154297 3.984375 C 24.829241 3.998716 24.526384 4.0933979 24.259766 4.2011719 C 24.010014 4.3016357 23.055766 4.7109106 21.552734 5.3554688 C 20.048394 6.0005882 18.056479 6.855779 15.931641 7.7695312 C 11.681964 9.5970359 6.9042108 11.654169 4.4570312 12.707031 C 4.3650097 12.746607 4.0439208 12.849183 3.703125 13.115234 C 3.3623292 13.381286 3 13.932585 3 14.546875 C 3 15.042215 3.2360676 15.534319 3.5332031 15.828125 C 3.8303386 16.121931 4.144747 16.267067 4.4140625 16.376953 C 5.3912284 16.775666 8.4218473 18.015862 8.9941406 18.25 C 9.195546 18.866983 10.29249 22.222526 10.546875 23.044922 C 10.714568 23.587626 10.874198 23.927519 11.082031 24.197266 C 11.185948 24.332139 11.306743 24.45034 11.453125 24.542969 C 11.511635 24.579989 11.575789 24.608506 11.640625 24.634766 L 11.644531 24.636719 C 11.659471 24.642719 11.67235 24.652903 11.6875 24.658203 C 11.716082 24.668202 11.735202 24.669403 11.773438 24.677734 C 11.925762 24.726927 12.079549 24.757812 12.216797 24.757812 C 12.80196 24.757814 13.160156 24.435547 13.160156 24.435547 L 13.181641 24.419922 L 16.191406 21.816406 L 19.841797 25.269531 C 19.893193 25.342209 20.372542 26 21.429688 26 C 22.057386 26 22.555319 25.685026 22.875 25.349609 C 23.194681 25.014192 23.393848 24.661807 23.478516 24.21875 L 23.478516 24.216797 C 23.557706 23.798129 26.921875 6.5273437 26.921875 6.5273438 L 26.916016 6.5507812 C 27.014496 6.1012683 27.040303 5.6826405 26.931641 5.2695312 C 26.822973 4.8564222 26.536648 4.4608905 26.181641 4.2480469 C 25.826669 4.0352506 25.479353 3.9700339 25.154297 3.984375 z M 24.966797 6.0742188 C 24.961997 6.1034038 24.970391 6.0887279 24.962891 6.1230469 L 24.960938 6.1347656 L 24.958984 6.1464844 C 24.958984 6.1464844 21.636486 23.196371 21.513672 23.845703 C 21.522658 23.796665 21.481573 23.894167 21.439453 23.953125 C 21.379901 23.91208 21.257812 23.859375 21.257812 23.859375 L 21.238281 23.837891 L 16.251953 19.121094 L 12.726562 22.167969 L 13.775391 17.96875 C 13.775391 17.96875 20.331562 11.182109 20.726562 10.787109 C 21.044563 10.471109 21.111328 10.360953 21.111328 10.251953 C 21.111328 10.105953 21.035234 10 20.865234 10 C 20.712234 10 20.506484 10.14875 20.396484 10.21875 C 18.963383 11.132295 12.671823 14.799141 9.8515625 16.439453 C 9.4033769 16.256034 6.2896636 14.981472 5.234375 14.550781 C 5.242365 14.547281 5.2397349 14.548522 5.2480469 14.544922 C 7.6958673 13.491784 12.47163 11.434667 16.720703 9.6074219 C 18.84524 8.6937992 20.838669 7.8379587 22.341797 7.1933594 C 23.821781 6.5586849 24.850125 6.1218894 24.966797 6.0742188 z"
+                  /> </svg>
+              </a>
             </li>
-
             <li class="child-connect">
-              <a href="https://instagram.com/mguseva_official?utm_medium=copy_link" class="child-link-contact">
-                <svg class="svg-contacts" enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <path d="M505,257c0,34.8-0.7,69.7,0.2,104.5c1.5,61.6-37.2,109.2-86.5,130.4c-19.8,8.5-40.6,13-62.1,13c-67.3,0.1-134.7,1-202-0.3   c-50.7-1-92.4-22.2-122.3-64c-15.7-22-23.2-47-23.2-74.1c0-71.7,0-143.3,0-215c0-58.5,28.5-99.4,79.1-126C110.2,14,134.1,9.1,159,9   c65.3,0,130.7-0.4,196,0.2c50.7,0.4,93,19.8,124.2,60.6c17.4,22.8,25.8,49,25.8,77.8C505,184,505,220.5,505,257z M46,257   c0,36.7,0,73.3,0,110c0,16.4,3.8,31.8,12.3,45.7c22.3,36.5,56,54.3,97.8,55c67.1,1,134.3,0.4,201.5,0.2c16.5,0,32.5-3.4,47.4-10.5   c40.6-19.4,63.3-50.3,63.1-96.7c-0.4-71-0.1-142-0.1-213c0-20.1-5.7-38.5-17.6-54.7c-23-31.1-54.8-46.4-92.8-46.8   c-67-0.8-134-0.3-201-0.2c-14.3,0-28.1,2.9-41.5,7.9c-36.8,13.7-71,48.4-69.4,99.5C46.9,188,46,222.5,46,257z"/><path d="M257.6,363c-64.5,0-116.5-51.4-116.6-115.4c-0.1-63,52.3-114.6,116.4-114.6c64.3-0.1,116.5,51.4,116.6,114.9   C374,311.3,321.9,362.9,257.6,363z M257.6,326c43.9,0,79.5-35.1,79.4-78.3c-0.1-42.8-35.7-77.8-79.4-77.8   c-43.9,0-79.7,34.9-79.7,78C178,291.1,213.7,326.1,257.6,326z"/><path d="M387.5,98c13.5,0,24.5,11.5,24.5,25.6c-0.1,14.1-11.2,25.5-24.7,25.4c-13.3-0.1-24.2-11.5-24.2-25.3   C363,109.6,374,98,387.5,98z"/>
-                </svg>
+              <a href="https://instagram.com/mguseva_official?utm_medium=copy_link"
+              class="child-link-contact">
+                <svg class="svg-contacts" enable-background="new 0 0 512 512"
+                version="1.1" viewBox="0 0 512 512" xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M505,257c0,34.8-0.7,69.7,0.2,104.5c1.5,61.6-37.2,109.2-86.5,130.4c-19.8,8.5-40.6,13-62.1,13c-67.3,0.1-134.7,1-202-0.3   c-50.7-1-92.4-22.2-122.3-64c-15.7-22-23.2-47-23.2-74.1c0-71.7,0-143.3,0-215c0-58.5,28.5-99.4,79.1-126C110.2,14,134.1,9.1,159,9   c65.3,0,130.7-0.4,196,0.2c50.7,0.4,93,19.8,124.2,60.6c17.4,22.8,25.8,49,25.8,77.8C505,184,505,220.5,505,257z M46,257   c0,36.7,0,73.3,0,110c0,16.4,3.8,31.8,12.3,45.7c22.3,36.5,56,54.3,97.8,55c67.1,1,134.3,0.4,201.5,0.2c16.5,0,32.5-3.4,47.4-10.5   c40.6-19.4,63.3-50.3,63.1-96.7c-0.4-71-0.1-142-0.1-213c0-20.1-5.7-38.5-17.6-54.7c-23-31.1-54.8-46.4-92.8-46.8   c-67-0.8-134-0.3-201-0.2c-14.3,0-28.1,2.9-41.5,7.9c-36.8,13.7-71,48.4-69.4,99.5C46.9,188,46,222.5,46,257z"
+                  />
+                  <path d="M257.6,363c-64.5,0-116.5-51.4-116.6-115.4c-0.1-63,52.3-114.6,116.4-114.6c64.3-0.1,116.5,51.4,116.6,114.9   C374,311.3,321.9,362.9,257.6,363z M257.6,326c43.9,0,79.5-35.1,79.4-78.3c-0.1-42.8-35.7-77.8-79.4-77.8   c-43.9,0-79.7,34.9-79.7,78C178,291.1,213.7,326.1,257.6,326z"
+                  />
+                  <path d="M387.5,98c13.5,0,24.5,11.5,24.5,25.6c-0.1,14.1-11.2,25.5-24.7,25.4c-13.3-0.1-24.2-11.5-24.2-25.3   C363,109.6,374,98,387.5,98z"
+                  /> </svg>
               </a>
             </li>
           </ul>
         </div>
-        
         <div class="contacts-support">
           <h3 id="contacts" class="header-support">Поддержка</h3>
-          <div class="list-support">
+          <div class="list-support"> <a href="https://mssg.me/mguseva_official" class="child-link-support">Написать
+                            <svg class="svg-f" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
 
-            <a href="https://mssg.me/mguseva_official" class="child-link-support">Написать 
-              <svg class="svg-f" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="20px" height="20px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
-           
-                <path id="WhatsApp" d="M90,43.841c0,24.213-19.779,43.841-44.182,43.841c-7.747,0-15.025-1.98-21.357-5.455L0,90l7.975-23.522
+                                <path id="WhatsApp" d="M90,43.841c0,24.213-19.779,43.841-44.182,43.841c-7.747,0-15.025-1.98-21.357-5.455L0,90l7.975-23.522
                   c-4.023-6.606-6.34-14.354-6.34-22.637C1.635,19.628,21.416,0,45.818,0C70.223,0,90,19.628,90,43.841z M45.818,6.982
                   c-20.484,0-37.146,16.535-37.146,36.859c0,8.065,2.629,15.534,7.076,21.61L11.107,79.14l14.275-4.537
                   c5.865,3.851,12.891,6.097,20.437,6.097c20.481,0,37.146-16.533,37.146-36.857S66.301,6.982,45.818,6.982z M68.129,53.938
@@ -620,19 +481,92 @@
                   c0.543-0.628,0.723-1.075,1.082-1.793c0.363-0.717,0.182-1.344-0.09-1.883c-0.27-0.537-2.438-5.825-3.34-7.977
                   c-0.902-2.15-1.803-1.792-2.436-1.792c-0.631,0-1.354-0.09-2.076-0.09c-0.722,0-1.896,0.269-2.889,1.344
                   c-0.992,1.076-3.789,3.676-3.789,8.963c0,5.288,3.879,10.397,4.422,11.113c0.541,0.716,7.49,11.92,18.5,16.223
-                  C58.2,65.771,58.2,64.336,60.186,64.156c1.984-0.179,6.406-2.599,7.312-5.107C68.398,56.537,68.398,54.386,68.129,53.938z"/>
-           
-              </svg>
-            </a>
-          
-            <a href="https://t.me/mguseva_official" class="child-link-support">Написать <svg class="svg-f" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="25px" height="25px"><path d="M 25.154297 3.984375 C 24.829241 3.998716 24.526384 4.0933979 24.259766 4.2011719 C 24.010014 4.3016357 23.055766 4.7109106 21.552734 5.3554688 C 20.048394 6.0005882 18.056479 6.855779 15.931641 7.7695312 C 11.681964 9.5970359 6.9042108 11.654169 4.4570312 12.707031 C 4.3650097 12.746607 4.0439208 12.849183 3.703125 13.115234 C 3.3623292 13.381286 3 13.932585 3 14.546875 C 3 15.042215 3.2360676 15.534319 3.5332031 15.828125 C 3.8303386 16.121931 4.144747 16.267067 4.4140625 16.376953 C 5.3912284 16.775666 8.4218473 18.015862 8.9941406 18.25 C 9.195546 18.866983 10.29249 22.222526 10.546875 23.044922 C 10.714568 23.587626 10.874198 23.927519 11.082031 24.197266 C 11.185948 24.332139 11.306743 24.45034 11.453125 24.542969 C 11.511635 24.579989 11.575789 24.608506 11.640625 24.634766 L 11.644531 24.636719 C 11.659471 24.642719 11.67235 24.652903 11.6875 24.658203 C 11.716082 24.668202 11.735202 24.669403 11.773438 24.677734 C 11.925762 24.726927 12.079549 24.757812 12.216797 24.757812 C 12.80196 24.757814 13.160156 24.435547 13.160156 24.435547 L 13.181641 24.419922 L 16.191406 21.816406 L 19.841797 25.269531 C 19.893193 25.342209 20.372542 26 21.429688 26 C 22.057386 26 22.555319 25.685026 22.875 25.349609 C 23.194681 25.014192 23.393848 24.661807 23.478516 24.21875 L 23.478516 24.216797 C 23.557706 23.798129 26.921875 6.5273437 26.921875 6.5273438 L 26.916016 6.5507812 C 27.014496 6.1012683 27.040303 5.6826405 26.931641 5.2695312 C 26.822973 4.8564222 26.536648 4.4608905 26.181641 4.2480469 C 25.826669 4.0352506 25.479353 3.9700339 25.154297 3.984375 z M 24.966797 6.0742188 C 24.961997 6.1034038 24.970391 6.0887279 24.962891 6.1230469 L 24.960938 6.1347656 L 24.958984 6.1464844 C 24.958984 6.1464844 21.636486 23.196371 21.513672 23.845703 C 21.522658 23.796665 21.481573 23.894167 21.439453 23.953125 C 21.379901 23.91208 21.257812 23.859375 21.257812 23.859375 L 21.238281 23.837891 L 16.251953 19.121094 L 12.726562 22.167969 L 13.775391 17.96875 C 13.775391 17.96875 20.331562 11.182109 20.726562 10.787109 C 21.044563 10.471109 21.111328 10.360953 21.111328 10.251953 C 21.111328 10.105953 21.035234 10 20.865234 10 C 20.712234 10 20.506484 10.14875 20.396484 10.21875 C 18.963383 11.132295 12.671823 14.799141 9.8515625 16.439453 C 9.4033769 16.256034 6.2896636 14.981472 5.234375 14.550781 C 5.242365 14.547281 5.2397349 14.548522 5.2480469 14.544922 C 7.6958673 13.491784 12.47163 11.434667 16.720703 9.6074219 C 18.84524 8.6937992 20.838669 7.8379587 22.341797 7.1933594 C 23.821781 6.5586849 24.850125 6.1218894 24.966797 6.0742188 z"/></svg></a>
-                
-          </div>
+                  C58.2,65.771,58.2,64.336,60.186,64.156c1.984-0.179,6.406-2.599,7.312-5.107C68.398,56.537,68.398,54.386,68.129,53.938z" />
+
+                            </svg>
+                        </a> <a href="https://t.me/mguseva_official" class="child-link-support">Написать <svg class="svg-f" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="25px" height="25px">
+                                <path d="M 25.154297 3.984375 C 24.829241 3.998716 24.526384 4.0933979 24.259766 4.2011719 C 24.010014 4.3016357 23.055766 4.7109106 21.552734 5.3554688 C 20.048394 6.0005882 18.056479 6.855779 15.931641 7.7695312 C 11.681964 9.5970359 6.9042108 11.654169 4.4570312 12.707031 C 4.3650097 12.746607 4.0439208 12.849183 3.703125 13.115234 C 3.3623292 13.381286 3 13.932585 3 14.546875 C 3 15.042215 3.2360676 15.534319 3.5332031 15.828125 C 3.8303386 16.121931 4.144747 16.267067 4.4140625 16.376953 C 5.3912284 16.775666 8.4218473 18.015862 8.9941406 18.25 C 9.195546 18.866983 10.29249 22.222526 10.546875 23.044922 C 10.714568 23.587626 10.874198 23.927519 11.082031 24.197266 C 11.185948 24.332139 11.306743 24.45034 11.453125 24.542969 C 11.511635 24.579989 11.575789 24.608506 11.640625 24.634766 L 11.644531 24.636719 C 11.659471 24.642719 11.67235 24.652903 11.6875 24.658203 C 11.716082 24.668202 11.735202 24.669403 11.773438 24.677734 C 11.925762 24.726927 12.079549 24.757812 12.216797 24.757812 C 12.80196 24.757814 13.160156 24.435547 13.160156 24.435547 L 13.181641 24.419922 L 16.191406 21.816406 L 19.841797 25.269531 C 19.893193 25.342209 20.372542 26 21.429688 26 C 22.057386 26 22.555319 25.685026 22.875 25.349609 C 23.194681 25.014192 23.393848 24.661807 23.478516 24.21875 L 23.478516 24.216797 C 23.557706 23.798129 26.921875 6.5273437 26.921875 6.5273438 L 26.916016 6.5507812 C 27.014496 6.1012683 27.040303 5.6826405 26.931641 5.2695312 C 26.822973 4.8564222 26.536648 4.4608905 26.181641 4.2480469 C 25.826669 4.0352506 25.479353 3.9700339 25.154297 3.984375 z M 24.966797 6.0742188 C 24.961997 6.1034038 24.970391 6.0887279 24.962891 6.1230469 L 24.960938 6.1347656 L 24.958984 6.1464844 C 24.958984 6.1464844 21.636486 23.196371 21.513672 23.845703 C 21.522658 23.796665 21.481573 23.894167 21.439453 23.953125 C 21.379901 23.91208 21.257812 23.859375 21.257812 23.859375 L 21.238281 23.837891 L 16.251953 19.121094 L 12.726562 22.167969 L 13.775391 17.96875 C 13.775391 17.96875 20.331562 11.182109 20.726562 10.787109 C 21.044563 10.471109 21.111328 10.360953 21.111328 10.251953 C 21.111328 10.105953 21.035234 10 20.865234 10 C 20.712234 10 20.506484 10.14875 20.396484 10.21875 C 18.963383 11.132295 12.671823 14.799141 9.8515625 16.439453 C 9.4033769 16.256034 6.2896636 14.981472 5.234375 14.550781 C 5.242365 14.547281 5.2397349 14.548522 5.2480469 14.544922 C 7.6958673 13.491784 12.47163 11.434667 16.720703 9.6074219 C 18.84524 8.6937992 20.838669 7.8379587 22.341797 7.1933594 C 23.821781 6.5586849 24.850125 6.1218894 24.966797 6.0742188 z" /></svg></a>            </div>
         </div>
       </div>
-        
-
+    </div>
+    <div class="container container-footer">
+      <div class="border-footer">
+        <ul class="list-connect-articles">
+          <li class="child-connect">
+            <a href="https://www.facebook.com/groups/zvezda.gimnastika/?ref=share"
+            class="child-link-contact">
+              <svg class="svg-contacts" enable-background="new 0 0 512 512"
+              version="1.1" viewBox="0 0 512 512" xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M308.3,508.5c-2.5,0.1-4.1,0.3-5.7,0.3c-34.2,0-68.3-0.1-102.5,0.1c-4.8,0-6.1-1.3-6.1-6.1c0.1-79.6,0.1-159.3,0.1-238.9   c0-2.1,0-4.2,0-6.9c-18.6,0-36.7,0-55.1,0c0-28.4,0-56.3,0-85c1.9,0,3.7,0,5.4,0c15,0,30-0.1,45,0.1c3.8,0,4.8-1.1,4.8-4.8   c-0.2-22.3-0.2-44.7,0-67c0.1-15.6,2.6-30.8,9.8-44.9c10.3-19.9,26.6-32.8,47.2-40.8c16.8-6.6,34.5-9,52.3-9.3   c29-0.4,58-0.2,87-0.3c2.7,0,4.9-0.1,4.9,3.7c-0.1,27.5-0.1,55-0.1,82.5c0,0.3-0.1,0.6-0.5,1.9c-1.7,0-3.6,0-5.5,0   c-18,0-36-0.1-54,0c-10.4,0-18.8,4.2-24.1,13.3c-1.6,2.7-2.6,6.2-2.6,9.4c-0.3,17,0,34-0.2,51c0,4,1.2,5.1,5.1,5.1   c25-0.2,50-0.1,75-0.1c2,0,3.9,0,7.3,0c-3.5,28.6-6.9,56.6-10.4,84.9c-26,0-51.3,0-77.1,0C308.3,340.8,308.3,424.4,308.3,508.5z"
+                /> </svg>
+            </a>
+          </li>
+          <li class="child-connect">
+            <a href="https://vk.com/gimnastika.zvezda" class="child-link-contact">
+              <svg class="svg-contacts" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="30px" height="30px" viewBox="0 0 548.358 548.358"
+              style="enable-background:new 0 0 548.358 548.358;" xml:space="preserve">
+                <path d="M545.451,400.298c-0.664-1.431-1.283-2.618-1.858-3.569c-9.514-17.135-27.695-38.167-54.532-63.102l-0.567-0.571
+                  l-0.284-0.28l-0.287-0.287h-0.288c-12.18-11.611-19.893-19.418-23.123-23.415c-5.91-7.614-7.234-15.321-4.004-23.13
+                  c2.282-5.9,10.854-18.36,25.696-37.397c7.807-10.089,13.99-18.175,18.556-24.267c32.931-43.78,47.208-71.756,42.828-83.939
+                  l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712c-4.764-1.427-10.853-1.663-18.278-0.712l-82.224,0.568
+                  c-1.332-0.472-3.234-0.428-5.712,0.144c-2.475,0.572-3.713,0.859-3.713,0.859l-1.431,0.715l-1.136,0.859
+                  c-0.952,0.568-1.999,1.567-3.142,2.995c-1.137,1.423-2.088,3.093-2.848,4.996c-8.952,23.031-19.13,44.444-30.553,64.238
+                  c-7.043,11.803-13.511,22.032-19.418,30.693c-5.899,8.658-10.848,15.037-14.842,19.126c-4,4.093-7.61,7.372-10.852,9.849
+                  c-3.237,2.478-5.708,3.525-7.419,3.142c-1.715-0.383-3.33-0.763-4.859-1.143c-2.663-1.714-4.805-4.045-6.42-6.995
+                  c-1.622-2.95-2.714-6.663-3.285-11.136c-0.568-4.476-0.904-8.326-1-11.563c-0.089-3.233-0.048-7.806,0.145-13.706
+                  c0.198-5.903,0.287-9.897,0.287-11.991c0-7.234,0.141-15.085,0.424-23.555c0.288-8.47,0.521-15.181,0.716-20.125
+                  c0.194-4.949,0.284-10.185,0.284-15.705s-0.336-9.849-1-12.991c-0.656-3.138-1.663-6.184-2.99-9.137
+                  c-1.335-2.95-3.289-5.232-5.853-6.852c-2.569-1.618-5.763-2.902-9.564-3.856c-10.089-2.283-22.936-3.518-38.547-3.71
+                  c-35.401-0.38-58.148,1.906-68.236,6.855c-3.997,2.091-7.614,4.948-10.848,8.562c-3.427,4.189-3.905,6.475-1.431,6.851
+                  c11.422,1.711,19.508,5.804,24.267,12.275l1.715,3.429c1.334,2.474,2.666,6.854,3.999,13.134c1.331,6.28,2.19,13.227,2.568,20.837
+                  c0.95,13.897,0.95,25.793,0,35.689c-0.953,9.9-1.853,17.607-2.712,23.127c-0.859,5.52-2.143,9.993-3.855,13.418
+                  c-1.715,3.426-2.856,5.52-3.428,6.28c-0.571,0.76-1.047,1.239-1.425,1.427c-2.474,0.948-5.047,1.431-7.71,1.431
+                  c-2.667,0-5.901-1.334-9.707-4c-3.805-2.666-7.754-6.328-11.847-10.992c-4.093-4.665-8.709-11.184-13.85-19.558
+                  c-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267
+                  c-4.952-10.185-9.329-20.037-13.134-29.554c-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-0.859c-0.95-0.76-2.475-1.567-4.567-2.427
+                  c-2.095-0.859-4.281-1.475-6.567-1.854l-78.229,0.568c-7.994,0-13.418,1.811-16.274,5.428l-1.143,1.711
+                  C0.288,140.146,0,141.668,0,143.763c0,2.094,0.571,4.664,1.714,7.707c11.42,26.84,23.839,52.725,37.257,77.659
+                  c13.418,24.934,25.078,45.019,34.973,60.237c9.897,15.229,19.985,29.602,30.264,43.112c10.279,13.515,17.083,22.176,20.412,25.981
+                  c3.333,3.812,5.951,6.662,7.854,8.565l7.139,6.851c4.568,4.569,11.276,10.041,20.127,16.416
+                  c8.853,6.379,18.654,12.659,29.408,18.85c10.756,6.181,23.269,11.225,37.546,15.126c14.275,3.905,28.169,5.472,41.684,4.716h32.834
+                  c6.659-0.575,11.704-2.669,15.133-6.283l1.136-1.431c0.764-1.136,1.479-2.901,2.139-5.276c0.668-2.379,1-5,1-7.851
+                  c-0.195-8.183,0.428-15.558,1.852-22.124c1.423-6.564,3.045-11.513,4.859-14.846c1.813-3.33,3.859-6.14,6.136-8.418
+                  c2.282-2.283,3.908-3.666,4.862-4.142c0.948-0.479,1.705-0.804,2.276-0.999c4.568-1.522,9.944-0.048,16.136,4.429
+                  c6.187,4.473,11.99,9.996,17.418,16.56c5.425,6.57,11.943,13.941,19.555,22.124c7.617,8.186,14.277,14.271,19.985,18.274
+                  l5.708,3.426c3.812,2.286,8.761,4.38,14.853,6.283c6.081,1.902,11.409,2.378,15.984,1.427l73.087-1.14
+                  c7.229,0,12.854-1.197,16.844-3.572c3.998-2.379,6.373-5,7.139-7.851c0.764-2.854,0.805-6.092,0.145-9.712
+                  C546.782,404.25,546.115,401.725,545.451,400.298z" /> </svg>
+            </a>
+          </li>
+          <li class="child-connect">
+            <a href="https://t.me/zvezdagym" class="child-link-contact">
+              <svg class="svg-contacts" fill="#000000" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 30 30" width="30px" height="30px">
+                <path d="M 25.154297 3.984375 C 24.829241 3.998716 24.526384 4.0933979 24.259766 4.2011719 C 24.010014 4.3016357 23.055766 4.7109106 21.552734 5.3554688 C 20.048394 6.0005882 18.056479 6.855779 15.931641 7.7695312 C 11.681964 9.5970359 6.9042108 11.654169 4.4570312 12.707031 C 4.3650097 12.746607 4.0439208 12.849183 3.703125 13.115234 C 3.3623292 13.381286 3 13.932585 3 14.546875 C 3 15.042215 3.2360676 15.534319 3.5332031 15.828125 C 3.8303386 16.121931 4.144747 16.267067 4.4140625 16.376953 C 5.3912284 16.775666 8.4218473 18.015862 8.9941406 18.25 C 9.195546 18.866983 10.29249 22.222526 10.546875 23.044922 C 10.714568 23.587626 10.874198 23.927519 11.082031 24.197266 C 11.185948 24.332139 11.306743 24.45034 11.453125 24.542969 C 11.511635 24.579989 11.575789 24.608506 11.640625 24.634766 L 11.644531 24.636719 C 11.659471 24.642719 11.67235 24.652903 11.6875 24.658203 C 11.716082 24.668202 11.735202 24.669403 11.773438 24.677734 C 11.925762 24.726927 12.079549 24.757812 12.216797 24.757812 C 12.80196 24.757814 13.160156 24.435547 13.160156 24.435547 L 13.181641 24.419922 L 16.191406 21.816406 L 19.841797 25.269531 C 19.893193 25.342209 20.372542 26 21.429688 26 C 22.057386 26 22.555319 25.685026 22.875 25.349609 C 23.194681 25.014192 23.393848 24.661807 23.478516 24.21875 L 23.478516 24.216797 C 23.557706 23.798129 26.921875 6.5273437 26.921875 6.5273438 L 26.916016 6.5507812 C 27.014496 6.1012683 27.040303 5.6826405 26.931641 5.2695312 C 26.822973 4.8564222 26.536648 4.4608905 26.181641 4.2480469 C 25.826669 4.0352506 25.479353 3.9700339 25.154297 3.984375 z M 24.966797 6.0742188 C 24.961997 6.1034038 24.970391 6.0887279 24.962891 6.1230469 L 24.960938 6.1347656 L 24.958984 6.1464844 C 24.958984 6.1464844 21.636486 23.196371 21.513672 23.845703 C 21.522658 23.796665 21.481573 23.894167 21.439453 23.953125 C 21.379901 23.91208 21.257812 23.859375 21.257812 23.859375 L 21.238281 23.837891 L 16.251953 19.121094 L 12.726562 22.167969 L 13.775391 17.96875 C 13.775391 17.96875 20.331562 11.182109 20.726562 10.787109 C 21.044563 10.471109 21.111328 10.360953 21.111328 10.251953 C 21.111328 10.105953 21.035234 10 20.865234 10 C 20.712234 10 20.506484 10.14875 20.396484 10.21875 C 18.963383 11.132295 12.671823 14.799141 9.8515625 16.439453 C 9.4033769 16.256034 6.2896636 14.981472 5.234375 14.550781 C 5.242365 14.547281 5.2397349 14.548522 5.2480469 14.544922 C 7.6958673 13.491784 12.47163 11.434667 16.720703 9.6074219 C 18.84524 8.6937992 20.838669 7.8379587 22.341797 7.1933594 C 23.821781 6.5586849 24.850125 6.1218894 24.966797 6.0742188 z"
+                /> </svg>
+            </a>
+          </li>
+          <li class="child-connect">
+            <a href="https://instagram.com/mguseva_official?utm_medium=copy_link"
+            class="child-link-contact">
+              <svg class="svg-contacts" enable-background="new 0 0 512 512"
+              version="1.1" viewBox="0 0 512 512" xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M505,257c0,34.8-0.7,69.7,0.2,104.5c1.5,61.6-37.2,109.2-86.5,130.4c-19.8,8.5-40.6,13-62.1,13c-67.3,0.1-134.7,1-202-0.3   c-50.7-1-92.4-22.2-122.3-64c-15.7-22-23.2-47-23.2-74.1c0-71.7,0-143.3,0-215c0-58.5,28.5-99.4,79.1-126C110.2,14,134.1,9.1,159,9   c65.3,0,130.7-0.4,196,0.2c50.7,0.4,93,19.8,124.2,60.6c17.4,22.8,25.8,49,25.8,77.8C505,184,505,220.5,505,257z M46,257   c0,36.7,0,73.3,0,110c0,16.4,3.8,31.8,12.3,45.7c22.3,36.5,56,54.3,97.8,55c67.1,1,134.3,0.4,201.5,0.2c16.5,0,32.5-3.4,47.4-10.5   c40.6-19.4,63.3-50.3,63.1-96.7c-0.4-71-0.1-142-0.1-213c0-20.1-5.7-38.5-17.6-54.7c-23-31.1-54.8-46.4-92.8-46.8   c-67-0.8-134-0.3-201-0.2c-14.3,0-28.1,2.9-41.5,7.9c-36.8,13.7-71,48.4-69.4,99.5C46.9,188,46,222.5,46,257z"
+                />
+                <path d="M257.6,363c-64.5,0-116.5-51.4-116.6-115.4c-0.1-63,52.3-114.6,116.4-114.6c64.3-0.1,116.5,51.4,116.6,114.9   C374,311.3,321.9,362.9,257.6,363z M257.6,326c43.9,0,79.5-35.1,79.4-78.3c-0.1-42.8-35.7-77.8-79.4-77.8   c-43.9,0-79.7,34.9-79.7,78C178,291.1,213.7,326.1,257.6,326z"
+                />
+                <path d="M387.5,98c13.5,0,24.5,11.5,24.5,25.6c-0.1,14.1-11.2,25.5-24.7,25.4c-13.3-0.1-24.2-11.5-24.2-25.3   C363,109.6,374,98,387.5,98z"
+                /> </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>
+
 </html>
